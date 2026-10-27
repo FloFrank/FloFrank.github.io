@@ -16,7 +16,7 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Courier New", Courier, monospace;
             max-width: 900px;
             margin: 0 auto;
             padding: 16px 20px;
@@ -51,15 +51,25 @@
 
         h1, h2 {
             color: var(--color-heading);
+            font-family: Garamond, "Times New Roman", serif;
+        }
+
+        header {
+            display: flow-root;
         }
 
         section {
             scroll-margin-top: 80px;
+            position: relative;
+            padding: 28px 24px;
+        }
+
+        section:nth-of-type(odd) {
             background: var(--color-surface);
-            padding: 24px;
-            margin: 20px 0;
-            border-radius: 12px;
-            border: 1px solid var(--color-border);
+        }
+
+        section:nth-of-type(even) {
+            background: #e6eef1;
         }
 
         a {
@@ -69,6 +79,18 @@
         a:hover {
             color: var(--color-heading);
         }
+
+        #contact a {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 12px;
+        }
+
+        #contact a:last-child {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+
       .profilfoto {
             width: 200px;
             height: 200px;
@@ -83,7 +105,7 @@
     <nav aria-label="Seitennavigation">
         <a href="#about">About Me</a>
         <a href="#projects">Projects</a>
-        <a href="#technologies">Technologies</a>
+        <a href="#career">Technologies</a>
         <a href="#contact">Contact</a>
     </nav>
 
@@ -114,9 +136,10 @@
         </a>
     </section>
 
-    <section id="technologies">
-        <h2>Technologies</h2>
+    <section id="career">
+        <h2>Career</h2>
         <p>Python · SQL · PostGIS · QGIS · GeoPandas</p>
+        <p>lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </section>
 
     <section id="contact">
@@ -129,6 +152,9 @@
         </a>
         <a href="https://www.linkedin.com/in/florian-frank-123456789/">
             My LinkedIn Profile
+        </a>
+        <a href="whatsapp://send?text=Hello%20Florian">
+            Contact me on WhatsApp 
         </a>
     </section>
 </body>
