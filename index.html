@@ -6,29 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Florian Frank | Spatial Data Science</title>
     <style>
+        :root {
+            --color-background: #f2f6f7;
+            --color-surface: #ffffff;
+            --color-text: #263238;
+            --color-heading: #2b6777;
+            --color-accent: #397f73;
+            --color-border: #dce7eb;
+        }
+
         body {
             font-family: Arial, sans-serif;
             max-width: 900px;
-            margin: 60px auto;
-            padding: 0 20px;
+            margin: 0 auto;
+            padding: 16px 20px;
             line-height: 1.7;
-            color: #52ab98;
-            background: #f2f2f2;
+            color: var(--color-text);
+            background: var(--color-background);
         }
 
-        h1, h2 {
-            color:#2b6777;
-        }
-
-        section {
-            background: #f2f2f2;
-            padding: 24px;
-            margin: 20px 0;
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 12px;
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
             border-radius: 12px;
         }
 
+        nav a {
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            background: var(--color-background);
+        }
+
+        h1, h2 {
+            color: var(--color-heading);
+        }
+
+        section {
+            scroll-margin-top: 80px;
+            background: var(--color-surface);
+            padding: 24px;
+            margin: 20px 0;
+            border-radius: 12px;
+            border: 1px solid var(--color-border);
+        }
+
         a {
-            color: #52ab98;
+            color: var(--color-accent);
+        }
+
+        a:hover {
+            color: var(--color-heading);
         }
       .profilfoto {
             width: 200px;
@@ -41,13 +80,20 @@
     </style>
 </head>
 <body>
-    <header>
+    <nav aria-label="Seitennavigation">
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#technologies">Technologies</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header id="top">
             <img src="images/IMG_0002 Kopie.jpg" alt="Foto von Florian Frank" class="profilfoto">
             <h1>Florian Frank</h1>
-            <p>GIS | Spatial Data Science | GeoAi</p>
+            <p>GIS-enthusiast | Spatial Data Science | GeoAi</p>
     </header>
 
-    <section>
+    <section id="about">
         <h2>About Me</h2>
         <p>
             I am engaged in geoinformatics,
@@ -56,7 +102,7 @@
         </p>
     </section>
 
-    <section>
+    <section id="projects">
         <h2>Projects</h2>
         <h3>Austria GIP Decoder</h3>
         <p>
@@ -68,15 +114,21 @@
         </a>
     </section>
 
-    <section>
+    <section id="technologies">
         <h2>Technologies</h2>
         <p>Python · SQL · PostGIS · QGIS · GeoPandas</p>
     </section>
 
-    <section>
+    <section id="contact">
         <h2>Contact</h2>
         <a href="https://github.com/FloFrank">
             My GitHub Profile
+        </a>
+        <a href="mailto:florian.frank@gmx.at">
+            Send me an email
+        </a>
+        <a href="https://www.linkedin.com/in/florian-frank-123456789/">
+            My LinkedIn Profile
         </a>
     </section>
 </body>
